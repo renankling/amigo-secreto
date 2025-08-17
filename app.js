@@ -2,6 +2,7 @@ let amigos = [];
 
 let nome = document.getElementById("amigo");
 let lista = document.getElementById("listaAmigos");
+let resultado = document.getElementById("resultado");
 
 function adicionarAmigo(){
     if(nome.value != "" ){
@@ -24,5 +25,14 @@ function exibirLista(){
         let item = document.createElement("li");
         item.textContent = amigos[i];
         lista.appendChild(item);
+    }
+}
+
+function sortearAmigo(){
+    if(amigos.length > 1){
+        let indice = Math.floor(Math.random() * amigos.length);
+        resultado.innerText = amigos[indice];
+    }else {
+        alert("Adicione mais pessoas para sortear");
     }
 }
