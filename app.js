@@ -1,1 +1,17 @@
-//O principal objetivo deste desafio é fortalecer suas habilidades em lógica de programação. Aqui você deverá desenvolver a lógica para resolver o problema.
+let amigos = [];
+
+let nome = document.getElementById("amigo");
+
+function adicionarAmigo(){
+    if(nome.value != "" ){
+        amigos.push(nome);
+        console.log(amigos);
+        limparCampo();
+    }else{
+        alert("Por favor, insira um nome");
+    }
+}
+
+function limparCampo(){
+    nome.value = "";
+}
